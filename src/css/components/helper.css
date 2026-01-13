@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.wrapper {
+  @apply mx-auto  ;
+}
 .container {
-  @apply mx-auto gap-[20px]
-         max-w-[1224px] px-[48px]
-         sm:max-w-[1224px] sm:px-[48px]
-         md:max-w-[1224px] md:px-[118px]
-         lg:max-w-[2094px] lg:px-[149px]
-         xl:max-w-[2094px] xl:px-[149px]
+  @apply px-[48px] 
+         md:max-w-[88%] md:px-[0px]
+         lg:max-w-[2094px] lg:px-[118px]
+         xl:max-w-[1152px] xl:px-[0px]
          2xl:max-w-[2300px] 2xl:px-[156px]
-         3xl:max-w-[2094px] 3xl:px-[0px];
+         3xl:max-w-[1920px] 3xl:px-[0px];
 }
