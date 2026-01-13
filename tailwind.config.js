@@ -12,6 +12,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'accent': '#00F5D4', 
       },
       screens: {
         'sm': '640px',
