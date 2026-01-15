@@ -1,3 +1,6 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/css/main.css ***!
+  \**************************************************************************************************************/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -650,8 +653,17 @@ video {
 .w-\[45px\]{
   width: 45px;
 }
+.w-\[50\%\]{
+  width: 50%;
+}
 .w-full{
   width: 100%;
+}
+.w-\[\]{
+  width: ;
+}
+.w-\[5\]{
+  width: 5;
 }
 .max-w-\[1152px\]{
   max-width: 1152px;

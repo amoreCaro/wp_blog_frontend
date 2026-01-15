@@ -1,26 +1,24 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // додаємо плагін для HTML
 
 module.exports = {
-  mode: 'production',
-  
+  mode: 'development',
+
   entry: {
-    main: './src/js/main.js',
-    main_css: './src/css/main.css',
+    main: './src/js/main.js',       // JS entry
+    main_css: './src/css/main.css', // CSS entry
   },
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].js',
+    path: path.resolve(__dirname, 'dist'), // dist всередині assets/
+    filename: 'js/[name].js',              // JS файли
     clean: true,
-    assetModuleFilename: 'images/[name][ext]', 
   },
 
   module: {
     rules: [
-      // css rules 
       {
         test: /\.css$/,
         use: [
@@ -29,38 +27,21 @@ module.exports = {
           'postcss-loader',
         ],
       },
-      {
-        test: /\.html$/i,
-        loader: "html-loader",
-      },
-      // images rules
-      {
-        test: /\.(png|jpe?g|gif|svg|webp)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name][ext]',
-        },
-      },
     ],
   },
 
   plugins: [
-    // removes empty JS files from CSS-only entries
-  new RemoveEmptyScriptsPlugin(), 
-
-  new MiniCssExtractPlugin({
-    filename: (pathData) => {
-      // outputs CSS as dist/css/main.css
-      return pathData.chunk.name === 'main_css'
-        ? 'css/main.css'
-        : 'js/[name].js';
-    },
-  }),
-    // take single-post.html and rename it to index.html in dist folder
+    new RemoveEmptyScriptsPlugin(),
+    new MiniCssExtractPlugin({
+      filename: (pathData) => {
+        // CSS entry зберігаємо як main.css
+        return pathData.chunk.name === 'main_css' ? 'css/main.css' : 'js/[name].js';
+      },
+    }),
     new HtmlWebpackPlugin({
-      template: './single-post.html',
-      filename: 'index.html',
-      inject: 'body',
+      template: './src/single-post.html', // твій шаблон HTML
+      filename: 'index.html',       // файл який буде згенерований у dist
+      inject: 'body',               // вставляє всі скрипти перед закриваючим </body>
     }),
   ],
 };
