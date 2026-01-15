@@ -39,7 +39,7 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
-      template: './src/single-post.html', // твій шаблон HTML
+      template: './single-post.html', // твій шаблон HTML
       filename: 'index.html',       // файл який буде згенерований у dist
       inject: 'body',               // вставляє всі скрипти перед закриваючим </body>
     }),
