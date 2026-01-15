@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-"./*.html",         // Шукає в папці assets
-  "./**/*.html",      // Шукає у всіх підпапках assets
+    "./*.html",         // Шукає в папці assets
     "./*.php",            // PHP у корені
     "./app/**/*.php",      // PHP компоненти
     "../**/*.php",      // PHP інклуди

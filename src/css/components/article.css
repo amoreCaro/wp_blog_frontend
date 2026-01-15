@@ -5,37 +5,43 @@
 .article {
   h1 {
     @apply font-bold text-[48px] leading-[52px] text-white mb-2;
-  }
-  h1 span {
-    @apply text-accent; /* заміни на свій $accent-color */
+
+    span {
+      @apply text-accent;
+    }
   }
 
   h2 {
     @apply font-bold text-[40px] leading-[43px] text-white my-[60px];
-  }
-  h2 span {
-    @apply text-accent;
+
+    span {
+      @apply text-accent;
+    }
   }
 
   h3 {
     @apply font-bold text-[32px] leading-[36px] text-white my-3;
-  }
-  h3 span {
-    @apply text-accent;
+
+    span {
+      @apply text-accent;
+    }
   }
 
   p {
-    @apply text-[18px] leading-[29px] font-light text-white;
-  }
-  p b {
-    @apply text-accent font-bold text-[16px] leading-[24px];
-  }
-  p i {
-    @apply italic;
+    @apply text-[18px] leading-[29px] font-light text-white my-5;
+
+    b {
+      @apply text-accent font-bold text-[16px] leading-[24px];
+    }
+
+    i {
+      @apply italic;
+    }
   }
 
   a {
     @apply text-accent underline text-[24px] leading-[42px];
+
     &:hover {
       @apply no-underline;
     }
@@ -43,31 +49,40 @@
 
   figure {
     @apply mb-4;
-  }
-  figure picture {
-    @apply block w-full;
-  }
-  figure img {
-    @apply block w-full transition-all duration-500;
+
+    picture {
+      @apply block w-full;
+    }
+
+    img {
+      @apply block w-full transition-all duration-500;
+    }
   }
 
-  ul, ol {
+  ul,
+  ol {
     @apply my-8;
   }
+
   li {
     @apply gap-3 text-white font-normal text-[24px] leading-[24px] my-8;
-  }
-  li::marker {
-    @apply text-accent;
+
+    &::marker {
+      @apply text-accent;
+    }
   }
 
-  blockquote p {
-    @apply font-normal italic text-[24px] leading-[42px] text-accent my-8;
-  }
-  blockquote span {
-    @apply font-normal text-[16px] leading-[24px] text-white;
-  }
-  blockquote span a {
-    @apply font-normal text-[16px] leading-[24px] underline text-white;
+  blockquote {
+    p {
+      @apply font-normal italic text-[24px] leading-[42px] text-accent my-8;
+    }
+
+    span {
+      @apply font-normal text-[16px] leading-[24px] text-white;
+
+      a {
+        @apply font-normal text-[16px] leading-[24px] underline text-white;
+      }
+    }
   }
 }

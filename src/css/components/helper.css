@@ -8,8 +8,8 @@
 }
 .container {
   @apply px-[48px] mx-auto
-         md:max-w-[88%] md:px-[0px]
+         md:max-w-[88%] md:px-[40px]
          lg:max-w-[2094px] lg:px-[118px]
          xl:max-w-[1152px] xl:px-[0px]
-         2xl:max-w-[2300px] 2xl:px-[156px]
+         2xl:max-w-[2300px] 2xl:px-[0px];
 }
