@@ -1,36 +1,26 @@
-# WordPress core
-wp-admin/
-wp-includes/
+# Node modules
+node_modules/
 
-# Ignore wp-content except themes and plugins
-wp-content/cache/
-wp-content/backups/
-wp-content/upgrade/
-wp-content/uploads/
+# Build output
+# Ми ігноруємо dist, бо Vercel сам згенерує його під час деплою
+dist/
 
-# Ignore debug files
+# Logs
 *.log
-*.sql
-*.zi
-*.tar.gz
+npm-debug.log*
 
-# OS generated files
+# System files
 .DS_Store
 Thumbs.db
 
 # IDE files
-.idea/
 .vscode/
+.idea/
 
-# Composer and Node modules
-vendor/
-assets/node_modules/
-assets/dist
-git-helper.html
-
-# Environment files
+# Environment variables
 .env
 .env.local
 .env.*.local
 
-node_modules
+# Vercel
+.vercel/
