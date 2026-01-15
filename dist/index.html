@@ -1,69 +1,209 @@
-<head><link href="css/main.css" rel="stylesheet"></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve '/Users/admin/Developer/work/assets/src/single-post.html' in '/Users/admin/Developer/work/assets'
-  ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/admin/Developer/work/assets/src/single-post.html' in '/Users/admin/Developer/work/assets'
-      at /Users/admin/Developer/work/assets/node_modules/webpack/lib/Compilation.js:2065:28
-      at /Users/admin/Developer/work/assets/node_modules/webpack/lib/NormalModuleFactory.js:1028:13
-      at eval (eval at create (/Users/admin/Developer/work/assets/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:10:1)
-      at /Users/admin/Developer/work/assets/node_modules/webpack/lib/NormalModuleFactory.js:429:22
-      at eval (eval at create (/Users/admin/Developer/work/assets/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:9:1)
-      at /Users/admin/Developer/work/assets/node_modules/webpack/lib/NormalModuleFactory.js:614:22
-      at /Users/admin/Developer/work/assets/node_modules/webpack/lib/NormalModuleFactory.js:184:10
-      at /Users/admin/Developer/work/assets/node_modules/webpack/lib/NormalModuleFactory.js:884:25
-      at /Users/admin/Developer/work/assets/node_modules/webpack/lib/NormalModuleFactory.js:1113:8
-      at /Users/admin/Developer/work/assets/node_modules/webpack/lib/NormalModuleFactory.js:1242:5
-  
-  - Compilation.js:2065 
-    [assets]/[webpack]/lib/Compilation.js:2065:28
-  
-  - NormalModuleFactory.js:1028 
-    [assets]/[webpack]/lib/NormalModuleFactory.js:1028:13
-  
-  
-  - NormalModuleFactory.js:429 
-    [assets]/[webpack]/lib/NormalModuleFactory.js:429:22
-  
-  
-  - NormalModuleFactory.js:614 
-    [assets]/[webpack]/lib/NormalModuleFactory.js:614:22
-  
-  - NormalModuleFactory.js:184 
-    [assets]/[webpack]/lib/NormalModuleFactory.js:184:10
-  
-  - NormalModuleFactory.js:884 
-    [assets]/[webpack]/lib/NormalModuleFactory.js:884:25
-  
-  - NormalModuleFactory.js:1113 
-    [assets]/[webpack]/lib/NormalModuleFactory.js:1113:8
-  
-  - NormalModuleFactory.js:1242 
-    [assets]/[webpack]/lib/NormalModuleFactory.js:1242:5
-  
-  - child-compiler.js:211 
-    [assets]/[html-webpack-plugin]/lib/child-compiler.js:211:18
-  
-  - Compiler.js:648 finalCallback
-    [assets]/[webpack]/lib/Compiler.js:648:5
-  
-  - Compiler.js:684 
-    [assets]/[webpack]/lib/Compiler.js:684:11
-  
-  - Compiler.js:1378 
-    [assets]/[webpack]/lib/Compiler.js:1378:17
-  
-  
-  - Hook.js:21 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [assets]/[tapable]/lib/Hook.js:21:14
-  
-  - Compiler.js:1374 
-    [assets]/[webpack]/lib/Compiler.js:1374:33
-  
-  - Compilation.js:3169 finalCallback
-    [assets]/[webpack]/lib/Compilation.js:3169:11
-  
-  - Compilation.js:3505 
-    [assets]/[webpack]/lib/Compilation.js:3505:11
-  
-  
-</pre><script defer src="js/main.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
+<link href="css/main.css" rel="stylesheet"></head>
+<body class="bg-black">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container flex justify-between text-white">
+                <a href="#">Logo</a>
+                <a href="#">Logo</a>
+            </div>
+        </header>
+        <main class="main">
+            <div class="single-post">
+                <div class="pt-[150px] pb-[100px]">
+                    <section class="container mx-auto relative max-w-[1152px] px-[48px] sm:px-0">
+                        <!-- Socials -->
+                        <nav class="absolute flex flex-col gap-[30px] w-[45px] items-center">
+                            <ul class="flex flex-col gap-[30px] list-none p-0 m-0">
+                                <li>
+                                    <a href="#" aria-label="Facebook" class="block max-w-[25px] w-full h-[25px] outline-none focus:outline-none active:outline-none no-underline">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full object-cover">
+                                            <circle cx="12" cy="12" r="12" fill="white"/>
+                                            <path d="M13.5 12H15.5L16 9.5H13.5V8C13.5 7.31 13.5 6.5 14.5 6.5H16V4.285C15.717 4.25 14.655 4 13.599 4C11.396 4 9.5 5.344 9.5 7.82V9.5H7.5V12H9.5V18H13.5V12Z" fill="black"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-label="Telegram" class="block max-w-[25px] w-full h-[25px] outline-none focus:outline-none active:outline-none no-underline">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full object-cover">
+                                            <circle cx="12" cy="12" r="12" fill="white"/>
+                                            <path d="M17.5 7L5.5 11.5L8.5 13L10 17.5L12.5 14.5L15.5 17L17.5 7Z" stroke="black" stroke-width="1.2" stroke-linejoin="round"/>
+                                            <path d="M8.5 13L17.5 7L10 14.5" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-label="WhatsApp" class="block max-w-[25px] w-full h-[25px] outline-none focus:outline-none active:outline-none no-underline">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full object-cover">
+                                            <path d="M12.04 2C6.51 2 2.01 6.5 2 12.04C2 13.81 2.46 15.54 3.34 17.07L2 22L7.05 20.67C8.52 21.47 10.18 21.9 11.88 21.9C17.41 21.9 21.91 17.4 21.92 11.87C21.92 9.19 20.88 6.69 18.99 4.8C17.1 2.91 14.61 2.01 12.04 2ZM17.43 15.65C17.19 16.32 16.27 16.89 15.54 17.05C15.04 17.16 14.4 17.26 12.21 16.35C9.41 15.19 7.6 12.33 7.46 12.15C7.32 11.96 6.31 10.63 6.31 9.25C6.31 7.87 7.02 7.2 7.3 6.92C7.51 6.7 7.87 6.6 8.16 6.6C8.26 6.6 8.35 6.6 8.43 6.6C8.68 6.61 8.81 6.63 8.97 7.03C9.18 7.54 9.68 8.78 9.74 8.91C9.8 9.04 9.87 9.21 9.78 9.38C9.7 9.55 9.62 9.64 9.5 9.78C9.38 9.92 9.24 10.1 9.14 10.22C9.02 10.36 8.89 10.51 9.05 10.78C9.21 11.05 9.76 11.95 10.57 12.67C11.61 13.6 12.47 13.9 12.77 14.03C13.01 14.13 13.25 14.1 13.43 13.9C13.65 13.65 13.92 13.26 14.2 12.87C14.4 12.59 14.65 12.56 14.91 12.66C15.18 12.76 16.6 13.46 16.89 13.61C17.18 13.76 17.37 13.84 17.45 13.98C17.53 14.12 17.53 14.8 17.29 15.47" fill="white"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-label="X" class="block max-w-[25px] w-full h-[25px] outline-none focus:outline-none active:outline-none no-underline">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full object-cover">
+                                            <path d="M14.2141 10.0384L23.1023 0H20.9961L13.2773 8.75618L7.11364 0H0L9.32182 13.2438L0 24H21.0623L15.1509 14.526L24 24H21.0623L14.2136 10.0384H14.2141ZM16.2168 22.7738H15.0495L7.84409 2.508H9.01136L16.2168 22.7738Z" fill="white"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Content -->
+                        <div class="mx-auto max-w-[800px] flex flex-col gap-5 pb-[100px]">
+                            <h1 class="text-white text-[56px] leading-[64px]">
+                                Vitalik Buterin Lays Out the Hidden Weaknesses of Decentralized Stablecoins
+                            </h1>
+                            <p class="text-[#cecece] font-light text-[18px] leading-[36px] py-[18px]">
+                                Ethereum co-founder Vitalik Buterin warns that decentralized stablecoins still suffer from deep structural flaws. From reliance on the U.S. dollar to oracle security risks and staking incentives, he argues that the industry has yet to solve its most fundamental design challenges.
+                            </p>
+                            <div class="flex items-center gap-4 font-normal text-white text-base leading-[16px]">
+                                <!-- Post date -->
+                                <span>January 11, 2026</span>
+                                <!-- Minutes to read an article -->
+                                <ul class="list-disc list-inside">
+                                    <li class="single-post__read-time marker:text-white">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Images -->
+                    <section class="w-full max-w-[1920px] mx-auto flex flex-col lg:flex-row gap-0 px-[40px] 2xl:px-[0px]">
+                        <div class="w-full lg:basis-1/2 h-[400px] lg:h-[642px]">
+                            <img 
+                                src="./src/images/buterin_1.png" 
+                                alt="Featured image for the article about Argentinian cuisine" 
+                                class="w-full h-full object-cover"
+                            >
+                        </div>
+
+                        <div class="w-full lg:basis-1/2 grid grid-cols-2 ">
+                            <div class="w-full min-h-[160px] lg:aspect-auto lg:h-[321px] overflow-hidden">
+                                <img src="./src/images/buterin_2.png" alt="" class="w-full h-full object-cover" />
+                            </div>
+
+                            <div class="w-full min-h-[160px] lg:aspect-auto lg:h-[321px] overflow-hidden">
+                                <img src="./src/images/buterin_3.png" alt="" class="w-full h-full object-cover" />
+                            </div>
+
+                            <div class="w-full min-h-[160px] lg:aspect-auto lg:h-[321px] overflow-hidden">
+                                <img src="./src/images/buterin_4.png" alt="" class="w-full h-full object-cover" />
+                            </div>
+
+                            <div class="w-full min-h-[160px] lg:aspect-auto lg:h-[321px] overflow-hidden">
+                                <img src="./src/images/buterin_5.png" alt="" class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+
+                    </section>
+                    <!-- Article -->
+                    <article class="article max-w-[800px] mx-auto py-[100px] px-[88px] lg:px-[0px]">
+                        <h3>Vitalik Buterin Lays Out the Hidden Weaknesses of Decentralized Stablecoins</h3>
+                        <p>
+                            Ethereum co-founder Vitalik Buterin says the crypto industry still hasn’t solved the core design problems behind truly decentralized stablecoins. Despite years of development, he argues that many existing models rely on fragile assumptions that may fail under long-term economic or technical stress.
+                        </p>
+                        <p>
+                            In a recent post on X, Buterin outlined three unresolved challenges. Rather than promoting a specific project, he offered a broader critique of how decentralized stablecoins are currently designed and why those designs may not hold up over time.   
+                        <p>
+                        <p>
+                            His first concern is the heavy reliance on the U.S. dollar. While practical in the short term, Buterin believes systems built for long-term resilience should not remain tied to a single national currency, as inflation can erode the value of a dollar peg. He suggested future stablecoins could instead track broader price indexes or purchasing power.
+                        </p>
+                        <p>
+                            The second issue involves price oracles, which supply blockchains with real-world data. If an oracle can be manipulated by enough capital, the entire system becomes vulnerable. In such cases, protocols are forced to rely on economic deterrents rather than technical security, often extracting value from users through fees, inflation or token-based governance.
+                        </p>
+                        <p>
+                            The third challenge is staking yield. When stablecoins are backed by staked ether, the yield generated by staking competes with returns stablecoin users could earn elsewhere, effectively forcing holders to accept lower returns. Buterin outlined several theoretical approaches to this problem but stressed that none represent a clear solution.
+                        </p>
+                        <p>
+                            He also highlighted slashing risk — penalties that can reduce the value of staked collateral due to downtime or network-wide conflicts — and warned that stablecoins cannot rely on fixed collateral levels. During sharp market downturns, systems must be able to rebalance dynamically to avoid losing their peg.
+                        </p>
+                        <p>
+                            Overall, Buterin’s comments suggest that while decentralized stablecoins remain a key goal for crypto, their most fundamental challenges remain unresolved and may require entirely new design approaches.
+                        </p>
+                    </article>
+                    <!-- Related posts -->
+                    <section class="py-[100px]">
+                        <div class="container xl:px-[5px] 3xl:px-[0px] 2xl:max-w-[1920px] lg:px-[120px] md:px-[52px] mx-auto gap-5 flex flex-col">
+                            <h2 class="text-white text-[48px] leading-[48px] font-medium pb-12">
+                                Related Posts
+                            </h2>
+
+                            <!-- List -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-5">
+                                <!-- Post item -->
+                                <div class="flex flex-col gap-5">
+                                    <div class="h-[200px] sm:max-w-[500px] w-full overflow-hidden">
+                                        <img src="./src/images/elon.png" alt="Elon Musk portrait" class="w-full h-full object-cover">
+                                    </div>
+                                    <a class="text-base leading-[16px] text-white font-semibold" href="#">
+                                        Elon Musk says X’s new algorithm will be made open source next week
+                                    </a>
+                                    <span class="text-base leading-[16px] text-[#c5c5c5] font-normal">
+                                        April 1, 2025
+                                    </span>
+                                </div> 
+
+                                <div class="flex flex-col gap-5">
+                                    <div class="h-[200px] sm:max-w-[500px] w-full overflow-hidden">
+                                        <img src="./src/images/blockchain.png" alt="Illustration of blockchain technology" class="w-full h-full object-cover">
+                                    </div>
+                                    <a class="text-base leading-[16px] text-white font-semibold" href="#">
+                                        The Blockchain’s Blind Spot: What is the Oracle Problem?    
+                                    </a>
+                                    <span class="text-base leading-[16px] text-[#c5c5c5] font-normal">
+                                        June 4, 2025
+                                    </span>
+                                </div> 
+                                
+                                <div class="flex flex-col gap-5">
+                                    <div class="h-[200px] sm:max-w-[500px] w-full overflow-hidden">
+                                        <img src="./src/images/world.png" alt="Map of the world highlighting Europe" class="w-full h-full object-cover">
+                                    </div>
+                                    <a class="text-base leading-[16px] text-white font-semibold" href="#">
+                                        When regulation isn’t enough: Europe’s strategic vulnerability in a tech-driven world
+                                    </a>
+                                    <span class="text-base leading-[16px] text-[#c5c5c5] font-normal">
+                                        December 7, 2025
+                                    </span>
+                                </div> 
+
+                                <div class="flex flex-col gap-5">
+                                    <div class="h-[200px] sm:max-w-[500px] w-full overflow-hidden">
+                                        <img src="./src/images/ai.png" alt="AI robot illustration" class="w-full h-full object-cover">
+                                    </div>
+                                    <a class="text-base leading-[16px] text-white font-semibold" href="#">
+                                        AI’s dirty secret: fossil fuels, hidden debt and old-school capitalism
+                                    </a>
+                                    <span class="text-base leading-[16px] text-[#c5c5c5] font-normal">
+                                        May 12, 2025
+                                    </span>
+                                </div> 
+
+                                <div class="flex flex-col gap-5">
+                                    <div class="h-[200px] sm:max-w-[500px] w-full overflow-hidden">
+                                        <img src="./src/images/italy_coders.png" alt="Italian coders working on computers" class="w-full h-full object-cover">
+                                    </div>
+                                    <a class="text-base leading-[16px] text-white font-semibold" href="#">
+                                        50% of Italy’s Coders Crashed in 48 Hours After the ChatGPT Ban 
+                                    </a>
+                                    <span class="text-base leading-[16px] text-[#c5c5c5] font-normal">
+                                        August 15, 2025
+                                    </span>
+                                </div> 
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+<script defer src="js/main.js"></script></body>
+<script src="./dist/js/main.js"></script>
+</html>
