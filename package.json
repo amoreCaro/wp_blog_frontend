@@ -6,6 +6,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.23",
     "css-loader": "^6",
+    "html-webpack-plugin": "^5.6.5",
     "mini-css-extract-plugin": "^2.9.4",
     "postcss": "^8.5.6",
     "postcss-loader": "^7",

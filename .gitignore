@@ -33,4 +33,5 @@ git-helper.html
 .env.local
 .env.*.local
 
+assets/node_modules/
 node_modules
