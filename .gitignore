@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # WordPress core
 wp-admin/
 wp-includes/
@@ -15,13 +16,28 @@ wp-content/uploads/
 *.tar.gz
 
 # OS generated files
+=======
+# Node modules
+node_modules/
+
+# Build output
+# Ми ігноруємо dist, бо Vercel сам згенерує його під час деплою
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# System files
+>>>>>>> stage
 .DS_Store
 Thumbs.db
 
 # IDE files
-.idea/
 .vscode/
+.idea/
 
+<<<<<<< HEAD
 # Composer and Node modules
 vendor/
 assets/node_modules/
@@ -29,9 +45,17 @@ assets/dist
 git-helper.html
 
 # Environment files
+=======
+# Environment variables
+>>>>>>> stage
 .env
 .env.local
 .env.*.local
 
+<<<<<<< HEAD
 assets/node_modules/
 node_modules
+=======
+# Vercel
+.vercel/
+>>>>>>> stage

@@ -26,7 +26,11 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+<<<<<<< HEAD
 eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_estimateSinglePostReadTime_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/estimateSinglePostReadTime.js */ \"./src/js/components/estimateSinglePostReadTime.js\");\n\n\ndocument.addEventListener('DOMContentLoaded', function() {\n  console.log(\"Main js loaded\")\n  ;(0,_components_estimateSinglePostReadTime_js__WEBPACK_IMPORTED_MODULE_0__.estimateSinglePostReadTime)();\n});\n\n//# sourceURL=webpack:///./src/js/main.js?\n}");
+=======
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_estimateSinglePostReadTime_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/estimateSinglePostReadTime.js */ \"./src/js/components/estimateSinglePostReadTime.js\");\n\n\ndocument.addEventListener('DOMContentLoaded', function() {\n  console.log(\"Main js loaded\");\n  (0,_components_estimateSinglePostReadTime_js__WEBPACK_IMPORTED_MODULE_0__.estimateSinglePostReadTime)();\n});\n\n//# sourceURL=webpack:///./src/js/main.js?\n}");
+>>>>>>> stage
 
 /***/ }
 
