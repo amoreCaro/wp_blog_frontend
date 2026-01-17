@@ -987,6 +987,9 @@ video {
   .\32xl\:max-w-\[2300px\]{
     max-width: 2300px;
   }
+  .\32xl\:max-w-\[1152px\]{
+    max-width: 1152px;
+  }
   .\32xl\:px-\[0px\]{
     padding-left: 0px;
     padding-right: 0px;
