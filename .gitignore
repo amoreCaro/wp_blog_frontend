@@ -35,3 +35,4 @@ git-helper.html
 
 assets/node_modules/
 node_modules
+**/node_modules/
