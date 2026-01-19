@@ -1,79 +1,75 @@
-// Node.js модуль для роботи з шляхами
 const path = require('path');
-
-// Витягує CSS з JS у окремі файли
+const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-// Видаляє "порожні" JS файли, які можуть створюватися при збірці CSS
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-
-// Генерує HTML файл і автоматично підключає туди JS та CSS
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// Копіює файли (наприклад, зображення) з src до dist без імпорту в коді
 const CopyPlugin = require('copy-webpack-plugin');
 
+const htmlFiles = fs.readdirSync('./src/html').filter(file => file.endsWith('.html'));
+
 module.exports = {
-  // Режим розробки (development) – включає карти сорсів і швидку збірку
   mode: 'development',
 
-  // Точки входу для JS і CSS
   entry: {
-    main: './src/js/main.js',       // Основний JS
-    main_css: './src/css/main.css', // Основний CSS
+    main: './src/js/main.js',
+    main_css: './src/css/main.css',
   },
 
-  // Вихідні файли
   output: {
-    path: path.resolve(__dirname, 'dist'), // Куди збирати файли
-    filename: 'js/[name].js',              // Імена JS файлів
-    clean: true, // Видаляє старі файли у dist перед новою збіркою
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/[name].js',
+    clean: true,
   },
 
-  // Правила для обробки різних типів файлів
   module: {
     rules: [
       {
-        test: /\.css$/, // Обробка CSS файлів
-        use: [
-          MiniCssExtractPlugin.loader, // Витягує CSS у окремий файл
-          'css-loader',                // Інтерпретує @import і url() у CSS
-          'postcss-loader',            // Додає autoprefixer і інші PostCSS плагіни
-        ],
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i, // Обробка зображень
-        type: 'asset/resource',              // Викидає файли у dist
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
         generator: {
-          filename: 'images/[name][ext]'     // Де зберігати імена файлів у dist
-        }
+          filename: 'images/[name][ext]',
+        },
       },
     ],
   },
 
   plugins: [
-    new RemoveEmptyScriptsPlugin(), // Видаляє порожні JS, якщо ми збираємо лише CSS
+    new RemoveEmptyScriptsPlugin(),
+    
     new MiniCssExtractPlugin({
-      filename: (pathData) => {
-        // Якщо збирається main_css – записати у css/main.css
-        // Для всіх інших – у js/[name].js
-        return pathData.chunk.name === 'main_css' ? 'css/main.css' : 'js/[name].js';
-      },
+      filename: 'css/main.css',
     }),
-    new HtmlWebpackPlugin({
-      template: './single-post.html', // Шаблон HTML
-      filename: 'index.html',          // Вихідний HTML файл
-      inject: 'body',                  // JS вставляється перед закриваючим </body>
-    }),
-    // Копіює всі зображення з src/images у dist/images
+
+    // Генеруємо HtmlWebpackPlugin для всіх HTML файлів автоматично
+    ...htmlFiles.map(file => 
+      new HtmlWebpackPlugin({
+        template: `./src/html/${file}`,
+        filename: file,
+        inject: 'body',
+      })
+    ),
+
     new CopyPlugin({
       patterns: [
         { 
           from: path.resolve(__dirname, 'src/images'), 
           to: path.resolve(__dirname, 'dist/images'),
-          noErrorOnMissing: true // Не видає помилку, якщо папка пуста
+          noErrorOnMissing: true 
         },
       ],
     }),
   ],
+
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 9000,
+    hot: true,
+  },
 };

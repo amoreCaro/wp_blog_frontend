@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/calculateTotalPages.js"
+/*!**************************************************!*\
+  !*** ./src/js/components/calculateTotalPages.js ***!
+  \**************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   calculateTotalPages: () => (/* binding */ calculateTotalPages)\n/* harmony export */ });\n// Файл: countPages.js (або .ts)\nfunction calculateTotalPages() {\n  // Знаходимо всі елементи page-item всередині pages-list\n  const pageItems = document.querySelectorAll('.pages-list .page-item');\n\n  // Знаходимо span для виведення числа\n  const totalPagesSpan = document.querySelector('.total-pages-number');\n\n  if (totalPagesSpan) {\n    totalPagesSpan.textContent = pageItems.length.toString();\n  }\n}\n\n//# sourceURL=webpack:///./src/js/components/calculateTotalPages.js?\n}");
+
+/***/ },
+
 /***/ "./src/js/components/estimateSinglePostReadTime.js"
 /*!*********************************************************!*\
   !*** ./src/js/components/estimateSinglePostReadTime.js ***!
@@ -26,7 +36,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_estimateSinglePostReadTime_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/estimateSinglePostReadTime.js */ \"./src/js/components/estimateSinglePostReadTime.js\");\n\n\ndocument.addEventListener('DOMContentLoaded', function() {\n  console.log(\"Main js loaded\")\n  ;(0,_components_estimateSinglePostReadTime_js__WEBPACK_IMPORTED_MODULE_0__.estimateSinglePostReadTime)();\n});\n\n//# sourceURL=webpack:///./src/js/main.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_estimateSinglePostReadTime_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/estimateSinglePostReadTime.js */ \"./src/js/components/estimateSinglePostReadTime.js\");\n/* harmony import */ var _components_calculateTotalPages_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/calculateTotalPages.js */ \"./src/js/components/calculateTotalPages.js\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', function() {\n  console.log(\"Main js loaded\")\n  ;(0,_components_calculateTotalPages_js__WEBPACK_IMPORTED_MODULE_1__.calculateTotalPages)();\n  (0,_components_estimateSinglePostReadTime_js__WEBPACK_IMPORTED_MODULE_0__.estimateSinglePostReadTime)();\n});\n\n//# sourceURL=webpack:///./src/js/main.js?\n}");
 
 /***/ }
 

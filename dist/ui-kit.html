@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Premium Design System</title>
+<link href="css/main.css" rel="stylesheet"></head>
+
+<body class="bg-black text-white antialiased selection:bg-blue-500/30">
+  <div class="design-system p-5 sm:p-8 lg:p-10 font-sans max-w-[1200px] mx-auto min-h-screen space-y-16">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="pb-5 sm:pb-8 border-b border-white/10">
+            <h1 class="text-[26px] leading-tight sm:text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent">
+                UI - Elements & Components
+            </h1>
+            <p class="text-white/50 mt-2 text-sm sm:text-lg font-light max-w-xl">
+                System documentation and visual style guide.
+            </p>
+        </div>
+    </div>
+
+    <section class="colors-section">
+      <div class="flex items-center gap-4 mb-8 group">
+        <div class="w-[3px] h-6 bg-blue-500 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
+        <h2 class="text-[20px] sm:text-[24px] font-semibold tracking-tight">Colors</h2>
+      </div>
+      <div class="bg-[#0a0a0a] border border-white/10 rounded-[24px] p-6 sm:p-8 flex flex-col gap-8 divide-y divide-white/5">
+        <div class="flex flex-col gap-6 py-2">
+          <span class="text-[11px] uppercase tracking-[0.2em] opacity-40 font-medium">Base Colors</span>
+          <div class="flex flex-wrap gap-6">
+            <div class="group flex items-center gap-4 px-4 py-3 rounded-2xl transition-all duration-300 hover:bg-white/5 cursor-pointer min-w-[220px]">
+              <div class="w-14 h-14 rounded-xl border border-white/20 shadow-inner transition-transform duration-500 group-hover:scale-105" style="background-color: #FFFFFF;"></div>
+              <div class="flex flex-col">
+                <span class="text-[15px] font-medium text-white">White</span>
+                <code class="text-[11px] text-white/40 font-mono mt-1">#FFFFFF</code>
+              </div>
+            </div>
+            <div class="group flex items-center gap-4 px-4 py-3 rounded-2xl transition-all duration-300 hover:bg-white/5 cursor-pointer min-w-[220px]">
+              <div class="w-14 h-14 rounded-xl shadow-inner transition-transform duration-500 group-hover:scale-105" style="background-color: #FF5733;"></div>
+              <div class="flex flex-col">
+                <span class="text-[15px] font-medium text-white">Red Accent</span>
+                <code class="text-[11px] text-white/40 font-mono mt-1">#FF5733</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6 pt-8 pb-2">
+          <span class="text-[11px] uppercase tracking-[0.2em] opacity-40 font-medium">Brand Colors</span>
+          <div class="flex flex-wrap gap-6">
+            <div class="group flex items-center gap-4 px-4 py-3 rounded-2xl transition-all duration-300 hover:bg-white/5 cursor-pointer min-w-[220px]">
+              <div class="w-14 h-14 rounded-xl shadow-[0_0_20px_rgba(51,87,255,0.3)] transition-transform duration-500 group-hover:scale-105" style="background-color: #3357FF;"></div>
+              <div class="flex flex-col">
+                <span class="text-[15px] font-medium text-white">Electric Blue</span>
+                <code class="text-[11px] text-white/40 font-mono mt-1">#3357FF</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="typography-section">
+      <div class="flex items-center gap-4 mb-6 group">
+          <div class="w-[3px] h-6 bg-blue-500 rounded-full"></div>
+          <h2 class="text-[18px] sm:text-[22px] font-semibold tracking-tight">Typography</h2>
+      </div>
+
+      <div class="bg-[#0a0a0a] border border-white/10 rounded-[18px] sm:rounded-[24px] p-6 sm:p-10 flex flex-col gap-10 divide-y divide-white/5">
+        <div class="flex flex-col gap-6 pt-2">
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-widest opacity-40 font-sans border-none">Headings</span>
+          <div class="flex flex-col gap-4">
+              <h1 class="text-4xl sm:text-5xl font-bold">Heading 1 <span class="text-blue-500">Blue Span</span></h1>
+              <h2 class="text-3xl sm:text-4xl font-bold">Heading 2 <span class="text-blue-500">Blue Span</span></h2>
+              <h3 class="text-2xl sm:text-3xl font-bold">Heading 3 <span class="text-blue-500">Blue Span</span></h3>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 pt-8">
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-widest opacity-40 font-sans border-none">Paragraphs & Inline</span>
+          <div class="max-w-3xl">
+              <p class="text-white/70 leading-relaxed text-base sm:text-lg">
+              Це стандартний текст параграфа. Тут можна побачити <b class="text-blue-400 font-bold">жирне накреслення</b>, 
+              <i>курсив</i>, та 
+              <a href="#" class="text-blue-400 underline decoration-blue-400/30 hover:decoration-blue-400 transition-all duration-300">стилізоване посилання</a>.
+              </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 pt-8">
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-widest opacity-40 font-sans border-none">Lists</span>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <ul class="space-y-3 text-white/70 list-none">
+                  <li class="flex items-start gap-3 before:content-['—'] before:text-blue-500">Елемент списку з кастомною рискою</li>
+                  <li class="flex items-start gap-3 before:content-['—'] before:text-blue-500">Риска додається через імітацію</li>
+              </ul>
+              <ol class="space-y-3 text-white/70 [counter-reset:list-counter] list-none">
+                  <li class="flex items-start gap-3 [counter-increment:list-counter] before:content-[counter(list-counter)] before:font-bold before:text-blue-500">Перший елемент з цифрою</li>
+                  <li class="flex items-start gap-3 [counter-increment:list-counter] before:content-[counter(list-counter)] before:font-bold before:text-blue-500">Текст залишається білим</li>
+              </ol>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 pt-8 pb-4">
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-widest opacity-40 font-sans border-none">Blockquote</span>
+          <div class="max-w-2xl border-l-2 border-blue-500 pl-6 py-2">
+              <blockquote class="italic text-xl sm:text-2xl text-white/90 leading-snug">
+              "Цитата використовує акцентну лінію з лівого боку для виділення важливих думок."
+              </blockquote>
+              <cite class="block mt-4 text-sm text-white/40 not-italic">Джерело цитати — <a href="#" class="text-blue-400 hover:underline transition-all">Website Link</a></cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-posts-ui">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-[3px] h-6 bg-blue-500 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
+        <h2 class="text-[20px] sm:text-[24px] font-semibold tracking-tight">Related Posts</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="flex flex-col gap-4 group">
+            <a href="#" class="h-52 overflow-hidden relative cursor-pointer border border-white/10">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-700 z-10"></div>
+                <img src="./images/elon.png" alt="Elon" class="w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-105">
+            </a>
+            <div class="flex flex-col gap-2">
+                <a href="#" class="text-white font-semibold text-[16px] leading-snug transition-colors duration-300 group-hover:text-blue-400 cursor-pointer">
+                    Elon Musk says X’s new algorithm will be made open source next week
+                </a>
+                <time class="text-sm text-[#C5C5C5] font-normal transition-opacity duration-300">April 1, 2025</time>
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="py-20 text-center border-t border-white/5">
+    <p class="text-white/20 text-xs tracking-[0.4em] uppercase">Premium Component System</p>
+  </footer>
+<script defer src="js/main.js"></script></body>
+</html>

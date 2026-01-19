@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./*.html",         // Шукає в папці assets
+    "./src/html/*.html",         // Шукає в папці assets
     "./*.php",            // PHP у корені
     "./app/**/*.php",      // PHP компоненти
     "../**/*.php",      // PHP інклуди
@@ -11,7 +11,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'accent': '#00F5D4', 
+        brand: {
+          indigo: '#6366F1',
+        },
+
+        surface: {
+          dark: '#0F0F11',
+          hover: '#1A1A1F',
+        },
+
+        border: {
+          light: '#232125',
+          hover: '#2F2F35',
+        },
+
+        content: {
+          white: '#FBFBFB',
+          muted: '#A39FA9',
+          ghost: '#6B6B75',
+        },
       },
       screens: {
         'sm': '640px',
